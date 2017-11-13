@@ -76,7 +76,9 @@ def transcribe_gcs(gcs_uri):
     response = client.recognize(config, audio)
     # Print the first alternative of all the consecutive results.
     for result in response.results:
-        print('Transcript: {}'.format(result.alternatives[0].transcript))
+        #print('Transcript: {}'.format(result.alternatives[0].transcript))
+        return result.alternatives[0].transcript
+
 # [END def_transcribe_gcs]
 
 
