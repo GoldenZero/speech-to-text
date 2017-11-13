@@ -7,7 +7,7 @@ class TextToPOS:
             text = fh.read()
             doc = nlp(text)
 
-        return [[w, w.pos_] for w in doc if w.pos_ in ['VERB', 'NOUN', 'PROPN'] ]
+        return [[w.text, w.pos_] for w in doc if w.pos_ in ['VERB', 'NOUN', 'PROPN'] ]
 
     @staticmethod
     def load_en_large():
